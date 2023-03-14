@@ -10,6 +10,11 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>E Commerce</title>
+        <meta
+          name="description"
+          content="E Commerce app"
+          key="desc"
+        />
       </Head>
       <Component {...pageProps} />
     </>
