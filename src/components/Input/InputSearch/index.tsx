@@ -31,7 +31,7 @@ const InputSearch = ({
         onChange={onChange}
         className={search_input}
       />
-      <a type="submit" className={search_btn}>
+      <a type="submit" href="#" className={search_btn}>
         <SearchIcon className={search_btn_icon} />
       </a>
     </form>
