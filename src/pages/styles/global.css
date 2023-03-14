@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Satoshi Variable';
+  src: url('../../../fonts/Satoshi-Variable.ttf');
+  font-display: swap; /* add this line */
+}
+
+@font-face {
+  font-family: 'ClashDisplay Variable';
+  src: url('../../../fonts/ClashDisplay-Variable.ttf');
+  font-display: swap; /* add this line */
+}
+
+body {
+  font-family: 'Satoshi Variable', sans-serif;
+}
+
+.layout {
+  position: relative;
+  min-width: 1400px;
+}
+
+.main {
+  padding-bottom: 380px;
+}

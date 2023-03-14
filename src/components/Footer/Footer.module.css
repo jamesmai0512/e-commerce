@@ -1,0 +1,74 @@
+.description {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding-right: 70px;
+  padding-bottom: 40px;
+}
+
+.mail_content {
+  padding-left: 30px;
+  flex: 1;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4e4d93;
+  text-align: start;
+}
+
+.content {
+  padding: 58px 83px 14px 83px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #2a254b;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 380px;
+  font-family: 'Satoshi Variable', sans-serif;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 12px;
+}
+
+.title_item {
+  font-size: 14px;
+  line-height: 19px;
+  padding-bottom: 12px;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.title_main {
+  padding-bottom: 16px;
+}
+
+.bottom {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sponsor {
+  display: flex;
+  gap: 24px;
+}

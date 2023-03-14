@@ -1,0 +1,49 @@
+.cart_layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.cart_layout_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 21px;
+}
+
+.cart_layout_info_product {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  gap: 8px;
+  color: #2a254b;
+}
+
+.cart_layout_info_quantity {
+  width: 142px;
+}
+
+.cart_layout_info_product_title {
+  font-family: 'ClashDisplay Variable', sans-serif;
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: black;
+}
+
+.cart_layout_info_product_description {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.cart_layout_info_product_price {
+  font-size: 16px;
+}
+
+.cart_layout_info_product_price_total {
+  font-size: 18px;
+  line-height: 27px;
+  width: 40px;
+  color: #2a254b;
+}

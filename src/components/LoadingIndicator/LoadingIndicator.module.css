@@ -1,0 +1,30 @@
+.container {
+  padding-top: 20px;
+}
+
+.loading_indicator {
+  font-family: 'Satoshi Variable', sans-serif;
+  text-align: center;
+  color: #2a254b;
+  font-size: 40px;
+}
+
+.loading_indicator:after {
+  content: '';
+  position: absolute;
+  animation: loadingDot ease-in-out infinite 2s;
+}
+@keyframes loadingDot {
+  0% {
+    content: '.';
+  }
+  22% {
+    content: '..';
+  }
+  66% {
+    content: '...';
+  }
+  88% {
+    content: '....';
+  }
+}

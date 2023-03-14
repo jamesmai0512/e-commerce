@@ -1,0 +1,112 @@
+.input_email {
+  width: 60%;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+}
+
+.input_email:focus {
+  outline: 0;
+}
+
+.search_box {
+  position: absolute;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.light {
+  background-color: #f9f9f9;
+  color: #2a254b;
+}
+
+.left {
+  left: 28px;
+  top: 10px;
+}
+
+.right {
+  right: 113px;
+  top: 27px;
+}
+
+.search_btn {
+  color: #726e8d;
+  float: right;
+  width: 25px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  transition: 2s;
+}
+
+.search_btn_icon {
+  font-size: 25px;
+  color: black;
+}
+
+.search_input {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #726e8d;
+  font-size: 14px;
+  transition: 0.4s;
+  line-height: 50px;
+  width: 0;
+}
+
+.search_box:hover > .search_input {
+  width: 135px;
+  padding: 0 7px;
+}
+.right {
+  right: 160px;
+}
+
+.search_box:hover {
+  background: #d2d2d2;
+}
+
+.input_number {
+  padding: 20px 60px;
+  border: none;
+  background: #f9f9f9;
+  color: black;
+  outline: 0;
+  text-align: center;
+  font-size: 16px;
+  height: 12px;
+}
+
+.button_control_right {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 18px;
+}
+
+.input_number_amount {
+  position: relative;
+  color: #cac6da;
+  width: 142px;
+}
+
+.input_number_amount input::-webkit-outer-spin-button,
+.input_number_amount input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.button_control_left {
+  background: none;
+  border: none;
+  left: 16px;
+  position: absolute;
+  top: 20px;
+}

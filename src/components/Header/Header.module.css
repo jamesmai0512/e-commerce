@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  margin: 0 29px;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search_icon {
+  background: none;
+  border: none;
+}
+
+.brand_name {
+  width: 65px;
+  height: 30px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #22202e;
+  font-family: 'ClashDisplay Variable', sans-serif;
+}
+
+.cart_button {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.cart_button_icon {
+  color: black;
+}
+
+.header_input_search {
+  height: 50px;
+}

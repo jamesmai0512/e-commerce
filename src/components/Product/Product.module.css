@@ -1,0 +1,166 @@
+.product_item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 1 0 calc(25% - 10px);
+  max-width: 320px;
+  cursor: pointer;
+}
+
+.product_title {
+  font-size: 20px;
+  padding-top: 20px;
+  line-height: 27px;
+}
+
+.product_price {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.small {
+  width: 305px;
+  height: 375px;
+  flex: 1;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 80px;
+  cursor: pointer;
+  font-family: 'ClashDisplay Variable', sans-serif;
+}
+
+.product_layout {
+  position: relative;
+}
+
+.main {
+  padding-bottom: 380px;
+}
+
+.product_details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #2a254b;
+  font-family: 'ClashDisplay Variable', sans-serif;
+  padding-bottom: 40px;
+}
+
+.large {
+  width: 630px;
+  height: 375px;
+  flex: 2;
+  cursor: pointer;
+}
+
+.product_detail {
+  display: flex;
+}
+
+.product_detail_content {
+  padding: 95px;
+  color: #2a254b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product_detail_content_title {
+  font-size: 36px;
+  line-height: 44.28px;
+}
+
+.product_detail_content_price {
+  font-size: 24px;
+  line-height: 32.4px;
+}
+
+.product_detail_content_description {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product_detail_content_description_content {
+  color: #505977;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product_detail_content_description_list_content {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.product_detail_content_description_list_content li::before {
+  content: '•   ';
+}
+
+.cart_function_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input_amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+}
+
+.product_detail_content_dimensions {
+  display: flex;
+  gap: 58px;
+}
+
+.product_detail_content_dimensions_size {
+  line-height: 30px;
+}
+
+.introduce_brand {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0 50px;
+  color: #2a254b;
+  font-size: 24px;
+}
+
+.order_step {
+  display: flex;
+  padding: 90px 100px;
+  gap: 58px;
+}
+
+.email_form {
+  background: #f9f9f9;
+  padding: 52px 65px;
+}
+
+.form_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 68px 45px;
+  background: white;
+}
+
+.form_text_title {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.form_email_submit {
+  display: flex;
+  width: 440px;
+}
+
+.form_text_description {
+  padding-bottom: 72px;
+}

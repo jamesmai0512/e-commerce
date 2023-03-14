@@ -1,0 +1,30 @@
+.dark {
+  background: rgba(249, 249, 249, 0.15);
+  color: white;
+}
+
+.button {
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Satoshi Variable', sans-serif;
+}
+
+.light {
+  padding: 16px 32px;
+  border: none;
+  color: #2a254b;
+}
+
+.purple {
+  background: #2a254b;
+  color: white;
+}
+
+.button_sign {
+  padding: 16px 32px;
+  border: none;
+  background: #f9f9f9;
+  color: #2a254b;
+  font-size: 16px;
+}

@@ -1,0 +1,29 @@
+.button_return_home {
+  border: 1px solid white;
+  background: transparent;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 200ms ease-in;
+  margin: 20px 0;
+}
+.button_return_home:hover {
+  background-color: white;
+  color: #555;
+  cursor: pointer;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_center_error {
+  font-size: 8em;
+}
+
+.text_not_found {
+  font-family: 'ClashDisplay Variable', sans-serif;
+}

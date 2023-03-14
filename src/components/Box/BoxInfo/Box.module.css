@@ -1,0 +1,18 @@
+.box_info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #2a254b;
+  font-family: 'ClashDisplay Variable', sans-serif;
+}
+
+.box_info_description {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.box_info_title {
+  padding: 16px 0 8px;
+  font-size: 20px;
+  line-height: 28px;
+}

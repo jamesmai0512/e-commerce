@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  list-style-type: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #726e8d;
+  cursor: pointer;
+  font-family: 'Satoshi Variable', sans-serif;
+}
+
+.search_icon {
+  background: none;
+  border: none;
+}
+
+.brand_name {
+  width: 65px;
+  height: 30px;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar_product {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px;
+  align-items: center;
+  position: relative;
+}
+
+.cart_button {
+  display: flex;
+  gap: 17px;
+}
