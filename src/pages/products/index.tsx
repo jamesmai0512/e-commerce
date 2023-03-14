@@ -19,7 +19,7 @@ const Products = ({ products }: ProductProps) => {
   const router = useRouter()
   const querySearch = router.query.search
   const category = router.query.category
-  const { product } = styles
+  const { product, none_product, text_alert_info, text_alert } = styles
 
   const { data, error } = useSWR(
     `${API}?search=${querySearch ? `${querySearch}` : ''}`,
@@ -42,18 +42,26 @@ const Products = ({ products }: ProductProps) => {
 
   return (
     <Layout>
-      <div className={product}>
-        {filteredProducts.map((product: TProduct) => (
-          <Product
-            id={product.id}
-            key={product.id}
-            imageUrl={product.imageUrl}
-            title={product.title}
-            price={product.price}
-            imageSize="small"
-          />
-        ))}
-      </div>
+      {filteredProducts && filteredProducts.length ? (
+        <div className={product}>
+          {filteredProducts.map((product: TProduct) => (
+            <Product
+              id={product.id}
+              key={product.id}
+              imageUrl={product.imageUrl}
+              title={product.title}
+              price={product.price}
+              imageSize="small"
+            />
+          ))}
+        </div>
+      ) : (
+        <div className={none_product}>
+          <div className={text_alert_info}>
+            <h1 className={text_alert}>There are no product!!</h1>
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }

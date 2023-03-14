@@ -26,9 +26,9 @@ const Layout = ({ children }: LayoutProps) => {
           {path === '/products/[productId]' ? '' : <Header />}
           {path === '/products/[productId]' ? '' : <Navbar />}
           {children}
+          <Footer />
         </main>
       </div>
-      <Footer />
     </>
   )
 }

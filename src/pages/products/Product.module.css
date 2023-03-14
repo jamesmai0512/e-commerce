@@ -123,3 +123,24 @@
 .form_text_description {
   padding-bottom: 72px;
 }
+
+.none_product {
+  background: #f9f9f9;
+  padding: 52px 65px;
+}
+
+.text_alert_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 68px 45px;
+  background: white;
+}
+
+.text_alert {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+}
