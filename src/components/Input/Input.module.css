@@ -31,6 +31,8 @@
 }
 
 .search_btn {
+  border: none;
+  background: none;
   color: #726e8d;
   float: right;
   width: 25px;
@@ -39,11 +41,14 @@
   display: flex;
   align-items: center;
   transition: 2s;
+  position: relative;
 }
 
 .search_btn_icon {
   font-size: 25px;
   color: black;
+  position: absolute;
+  left: -1px;
 }
 
 .search_input {
@@ -61,7 +66,7 @@
 
 .search_box:hover > .search_input {
   width: 135px;
-  padding: 0 7px;
+  padding-left: 7px;
 }
 .right {
   right: 160px;
