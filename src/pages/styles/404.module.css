@@ -1,11 +1,11 @@
 .button_return_home {
-  border: 1px solid white;
+  border: 1px solid #2a254b;
   background: transparent;
   outline: none;
   padding: 10px 20px;
   font-size: 1.1rem;
   font-weight: bold;
-  color: white;
+  color: #2a254b;
   text-transform: uppercase;
   transition: background-color 200ms ease-in;
   margin: 20px 0;
