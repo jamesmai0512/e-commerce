@@ -11,6 +11,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         >
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=PlantPots"
             >
@@ -19,6 +20,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
           </li>
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=Ceramics"
             >
@@ -27,6 +29,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
           </li>
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=Table"
             >
@@ -35,6 +38,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
           </li>
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=Chair"
             >
@@ -43,6 +47,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
           </li>
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=Crockery"
             >
@@ -51,6 +56,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
           </li>
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=Tableware"
             >
@@ -59,6 +65,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
           </li>
           <li>
             <a
+              aria-label="navbar"
               class="nav_link"
               href="/products?category=Cutlery"
             >
@@ -76,6 +83,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
       >
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=PlantPots"
           >
@@ -84,6 +92,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         </li>
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=Ceramics"
           >
@@ -92,6 +101,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         </li>
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=Table"
           >
@@ -100,6 +110,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         </li>
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=Chair"
           >
@@ -108,6 +119,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         </li>
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=Crockery"
           >
@@ -116,6 +128,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         </li>
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=Tableware"
           >
@@ -124,6 +137,7 @@ exports[`Navbar component Should renders the navbar correctly 1`] = `
         </li>
         <li>
           <a
+            aria-label="navbar"
             class="nav_link"
             href="/products?category=Cutlery"
           >

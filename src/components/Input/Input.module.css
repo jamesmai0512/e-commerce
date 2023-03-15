@@ -52,6 +52,7 @@
 }
 
 .search_input {
+  font-family: 'Satoshi Variable', sans-serif;
   border: none;
   background: none;
   outline: none;
@@ -68,6 +69,7 @@
   width: 135px;
   padding-left: 7px;
 }
+
 .right {
   right: 160px;
 }

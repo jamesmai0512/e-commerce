@@ -23,10 +23,11 @@ const {
   text_alert,
 } = styles
 
-interface CartItem {
+export interface CartItem {
   id: string
   quantity: number
   productId: number
+  price: number
 }
 
 interface Props {
@@ -81,6 +82,7 @@ const Carts = ({ carts }: Props) => {
                 productId={cartItem.productId}
                 cartId={cartItem.id}
                 quantity={cartItem.quantity}
+                price={cartItem.price}
                 updateCartItemQuantity={updateCartItemQuantity}
                 deleteCartItem={deleteCartItem}
               />

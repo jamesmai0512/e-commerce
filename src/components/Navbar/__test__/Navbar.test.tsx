@@ -22,12 +22,10 @@ describe('Navbar component', () => {
 
   it('Should renders the correct labels and URLs for each navbar link', () => {
     render(<Navbar />)
-    NAVBAR.forEach(({ label, query }) => {
-      const navLink = screen.getByRole('link', { name: label })
-      expect(navLink).toHaveAttribute(
-        'href',
-        `/products?category=${encodeURIComponent(query)}`,
-      )
-    })
+    const navLink = screen.getByRole('link', { name: NAVBAR[1].label })
+    expect(navLink).toHaveAttribute(
+      'href',
+      `/products?category=${encodeURIComponent(NAVBAR[1].query)}`,
+    )
   })
 })

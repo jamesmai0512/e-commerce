@@ -1,29 +1,35 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import useSWR from 'swr'
 
 // Component
 import Button from '@/components/Button'
 import InputNumber from '@/components/Input/InputNumber'
 import Input from '@/components/Input'
 import Layout from '@/components/Layout'
+import LoadingIndicator from '@/components/LoadingIndicator'
+import { CartProps } from '@/components/Cart'
+import BoxInfo from '@/components/Box/BoxInfo'
 
 // Types
 import { imageRoute, ORDERSTEPS, TProduct } from '@/constants/common'
+import { CartItem } from '../carts'
 
 // Image
 const BigChair = imageRoute('BigChair')
 
 // Styles
 import styles from './Product.module.css'
-import BoxInfo from '@/components/Box/BoxInfo'
-import LoadingIndicator from '@/components/LoadingIndicator'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 interface Props {
   product: TProduct
 }
+
+const API = 'https://63f72caee40e087c9588cb02.mockapi.io'
 
 const ProductDetailPage = ({ product }: Props) => {
   const {
@@ -48,27 +54,64 @@ const ProductDetailPage = ({ product }: Props) => {
   } = styles
   const router = useRouter()
   const [value, setValue] = useState(1)
+  const [carts, setCarts] = useState<CartItem[]>([])
 
-  const addProductToCart = async (
-    newValue: number,
-    event: React.FormEvent<HTMLFormElement>,
-  ) => {
-    event.preventDefault()
-    const API = 'https://63f72caee40e087c9588cb02.mockapi.io/carts'
-    const response = await fetch(API, {
-      method: 'POST',
-      body: JSON.stringify({
-        productId: product.id,
-        quantity: newValue,
-      }),
-    })
-
-    if (!response.ok) {
-      throw new Error('Unable to add product to cart')
+  useEffect(() => {
+    const fetchCartsData = async () => {
+      const res = await fetch(`${API}/carts`)
+      const cartsData = await res.json()
+      setCarts(cartsData)
     }
 
-    return await response.json()
-  }
+    fetchCartsData()
+  }, [])
+
+  const addProductToCart = useCallback(
+    async (newValue: number, event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+
+      try {
+        const existingCartItem = carts.find(
+          (item: CartItem) => item.productId === product.id,
+        )
+        let updatedQuantity = newValue
+        if (existingCartItem) {
+          updatedQuantity += existingCartItem.quantity
+          const response = await fetch(`${API}/carts`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              productId: product.id,
+              quantity: updatedQuantity,
+            }),
+          })
+          if (!response.ok) {
+            throw new Error('Unable to add product to cart')
+          }
+        } else {
+          const response = await fetch(`${API}/carts`, {
+            method: 'POST',
+            body: JSON.stringify({
+              productId: product.id,
+              quantity: newValue,
+              price: product.price,
+            }),
+          })
+          if (!response.ok) {
+            throw new Error('Unable to add product to cart')
+          }
+        }
+        router.push('/carts')
+      } catch (error) {
+        return {
+          notFound: true,
+        }
+      }
+    },
+    [product.id, router],
+  )
 
   const handleIncrease = useCallback(
     (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -92,10 +135,6 @@ const ProductDetailPage = ({ product }: Props) => {
     },
     [value],
   )
-
-  if (router.isFallback) {
-    return <LoadingIndicator />
-  }
 
   return (
     <Layout>
@@ -188,16 +227,33 @@ const ProductDetailPage = ({ product }: Props) => {
     </Layout>
   )
 }
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const products = await fetcher(`${API}/products`)
+    const paths = products.map((product: TProduct) => ({
+      params: { productId: String(product.id) },
+    }))
+    return { paths, fallback: false }
+  } catch (error) {
+    console.error(error)
+    return { paths: [], fallback: true }
+  }
+}
 
-export const getServerSideProps = async ({ params }: any) => {
-  const API = 'https://63f72caee40e087c9588cb02.mockapi.io'
-
-  const product = await fetcher(`${API}/products/${params.productId}`)
-
-  return {
-    props: {
-      product,
-    },
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  try {
+    const { productId } = params || {}
+    const product = await fetcher(`${API}/products/${productId}`)
+    return {
+      props: {
+        product,
+      },
+    }
+  } catch (error) {
+    console.error(error)
+    return {
+      notFound: true,
+    }
   }
 }
 

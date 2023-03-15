@@ -27,7 +27,7 @@ const Products = ({ products }: ProductProps) => {
   )
 
   if (error) return { notFound: true }
-  if (!data)
+  if (!products)
     return (
       <div>
         <LoadingIndicator />
@@ -35,10 +35,10 @@ const Products = ({ products }: ProductProps) => {
     )
 
   const filteredProducts = category
-    ? data.filter((product: TProduct) =>
+    ? products.filter((product: TProduct) =>
         product.category.includes(category as string),
       )
-    : data
+    : products
 
   return (
     <Layout>
@@ -58,7 +58,7 @@ const Products = ({ products }: ProductProps) => {
       ) : (
         <div className={none_product}>
           <div className={text_alert_info}>
-            <h1 className={text_alert}>There are no product!!</h1>
+            <h1 className={text_alert}>There are no products!!</h1>
           </div>
         </div>
       )}

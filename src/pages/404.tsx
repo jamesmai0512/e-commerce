@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 // Styles
@@ -23,6 +22,7 @@ const Custom404 = () => {
         <h1 className={text_center_error}>404</h1>
         <h3 className={text_not_found}>PAGE NOT FOUND</h3>
         <button
+          aria-label="return-home"
           onClick={handleReturnHome}
           className={button_return_home}
           type="button"

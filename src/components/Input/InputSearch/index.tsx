@@ -30,7 +30,7 @@ const InputSearch = ({
         data-test="textbox"
         onChange={onChange}
         className={search_input}
-        placeholder="search"
+        placeholder="Search"
       />
       <button type="submit" className={search_btn}>
         <SearchIcon className={search_btn_icon} />

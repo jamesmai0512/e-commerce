@@ -1,5 +1,4 @@
 import { memo, useCallback, useState } from 'react'
-import { redirect } from 'next/navigation'
 
 // Styles
 import styles from './Cart.module.css'
@@ -11,6 +10,7 @@ export interface CartProps {
   cartId: string
   productId: number
   quantity: number
+  price: number
   updateCartItemQuantity: (cartItemId: string, newQuantity: number) => void
   deleteCartItem: (cartItemId: string) => void
 }
@@ -21,6 +21,7 @@ const Cart = ({
   quantity,
   cartId,
   productId,
+  price,
   updateCartItemQuantity,
   deleteCartItem,
 }: CartProps) => {
@@ -95,8 +96,6 @@ const Cart = ({
     }
   }, [value, updateShoppingCart, deleteCart])
 
-  const productPrice = 85
-
   return (
     <div className={cart_layout}>
       <div className={cart_layout_info}>
@@ -121,7 +120,7 @@ const Cart = ({
             data-testid="cart-price"
             className={cart_layout_info_product_price}
           >
-            £{productPrice}
+            £{price}
           </h3>
         </div>
       </div>
@@ -132,9 +131,7 @@ const Cart = ({
           handleDecrease={handleDecrease}
         />
       </div>
-      <h3 className={cart_layout_info_product_price_total}>
-        £{value * productPrice}
-      </h3>
+      <h3 className={cart_layout_info_product_price_total}>£{value * price}</h3>
     </div>
   )
 }
